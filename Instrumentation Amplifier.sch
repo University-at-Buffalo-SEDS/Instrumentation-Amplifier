@@ -1,0 +1,484 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Instrumentation Amplifier"
+Date ""
+Rev ""
+Comp "UB SEDS"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 5C806BF3
+P 1950 3350
+F 0 "J1" H 2150 3350 50  0000 C CNN
+F 1 "Bridge" H 2150 3250 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-4_P5.08mm" H 1950 3350 50  0001 C CNN
+F 3 "~" H 1950 3350 50  0001 C CNN
+	1    1950 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C806E6B
+P 4100 3400
+F 0 "#PWR?" H 4100 3150 50  0001 C CNN
+F 1 "GND" H 4105 3227 50  0000 C CNN
+F 2 "" H 4100 3400 50  0001 C CNN
+F 3 "" H 4100 3400 50  0001 C CNN
+	1    4100 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5C807D82
+P 3450 4750
+F 0 "C1" H 3250 4800 50  0000 L CNN
+F 1 "10uF" H 3150 4700 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm" H 3488 4600 50  0001 C CNN
+F 3 "~" H 3450 4750 50  0001 C CNN
+	1    3450 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV1
+U 1 1 5C80E99D
+P 2650 4450
+F 0 "RV1" H 2580 4496 50  0000 R CNN
+F 1 "20k" H 2580 4405 50  0000 R CNN
+F 2 "Instrumentation Amplifier:Bourns_PV36Y" H 2650 4450 50  0001 C CNN
+F 3 "~" H 2650 4450 50  0001 C CNN
+	1    2650 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C81802C
+P 4300 5050
+F 0 "#PWR?" H 4300 4800 50  0001 C CNN
+F 1 "GND" H 4305 4877 50  0000 C CNN
+F 2 "" H 4300 5050 50  0001 C CNN
+F 3 "" H 4300 5050 50  0001 C CNN
+	1    4300 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5C82E6F5
+P 1500 4750
+F 0 "D1" H 1491 4966 50  0000 C CNN
+F 1 "LED" H 1491 4875 50  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 1500 4750 50  0001 C CNN
+F 3 "~" H 1500 4750 50  0001 C CNN
+	1    1500 4750
+	0    -1   -1   0   
+$EndComp
+Text Notes 3050 3950 0    50   ~ 0
+G = 5 + 80kΩ/Rg
+NoConn ~ 2650 4300
+Wire Wire Line
+	2250 4750 2500 4750
+Wire Wire Line
+	2500 4450 2250 4450
+Text Label 2250 4450 0    50   ~ 0
+Rg2
+Text Label 2250 4750 0    50   ~ 0
+Rg1
+$Comp
+L Device:R R1
+U 1 1 5C831809
+P 1500 4450
+F 0 "R1" H 1430 4404 50  0000 R CNN
+F 1 "470" H 1430 4495 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1430 4450 50  0001 C CNN
+F 3 "~" H 1500 4450 50  0001 C CNN
+	1    1500 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+BATT #PWR?
+U 1 1 5C831A56
+P 3450 4600
+F 0 "#PWR?" H 3450 4450 50  0001 C CNN
+F 1 "+BATT" H 3465 4773 50  0000 C CNN
+F 2 "" H 3450 4600 50  0001 C CNN
+F 3 "" H 3450 4600 50  0001 C CNN
+	1    3450 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR?
+U 1 1 5C831AA6
+P 4100 3100
+F 0 "#PWR?" H 4100 2950 50  0001 C CNN
+F 1 "+BATT" H 4115 3273 50  0000 C CNN
+F 2 "" H 4100 3100 50  0001 C CNN
+F 3 "" H 4100 3100 50  0001 C CNN
+	1    4100 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C831AD0
+P 2150 3450
+F 0 "#PWR?" H 2150 3200 50  0001 C CNN
+F 1 "GND" H 2155 3277 50  0000 C CNN
+F 2 "" H 2150 3450 50  0001 C CNN
+F 3 "" H 2150 3450 50  0001 C CNN
+	1    2150 3450
+	1    0    0    -1  
+$EndComp
+Text Label 2150 3250 0    50   ~ 0
+IN+
+Text Label 2150 3350 0    50   ~ 0
+IN-
+$Comp
+L Instrumentation_Amplifier:INA126 U1
+U 1 1 5C833830
+P 3300 3300
+F 0 "U1" H 3100 3650 50  0000 L CNN
+F 1 "INA126" H 3400 3500 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3300 3300 50  0001 C CNN
+F 3 "" H 3300 3300 50  0001 C CNN
+	1    3300 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4600 3600 4600
+Wire Wire Line
+	4700 4600 4300 4600
+Connection ~ 3450 4600
+$Comp
+L Device:C C2
+U 1 1 5C833F42
+P 4700 4750
+F 0 "C2" H 4815 4796 50  0000 L CNN
+F 1 "22uF" H 4815 4705 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm" H 4738 4600 50  0001 C CNN
+F 3 "~" H 4700 4750 50  0001 C CNN
+	1    4700 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C8340D6
+P 3300 3600
+F 0 "#PWR?" H 3300 3350 50  0001 C CNN
+F 1 "GND" H 3305 3427 50  0000 C CNN
+F 2 "" H 3300 3600 50  0001 C CNN
+F 3 "" H 3300 3600 50  0001 C CNN
+	1    3300 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C834160
+P 1500 4900
+F 0 "#PWR?" H 1500 4650 50  0001 C CNN
+F 1 "GND" H 1505 4727 50  0000 C CNN
+F 2 "" H 1500 4900 50  0001 C CNN
+F 3 "" H 1500 4900 50  0001 C CNN
+	1    1500 4900
+	1    0    0    -1  
+$EndComp
+Text Label 3950 3300 0    50   ~ 0
+OUT
+Wire Wire Line
+	2900 3350 2750 3350
+Text Label 2750 3350 0    50   ~ 0
+Rg2
+Wire Wire Line
+	2900 3250 2750 3250
+Text Label 2750 3250 0    50   ~ 0
+Rg1
+$Comp
+L power:GND #PWR?
+U 1 1 5C834C9B
+P 3500 3500
+F 0 "#PWR?" H 3500 3250 50  0001 C CNN
+F 1 "GND" H 3505 3327 50  0000 C CNN
+F 2 "" H 3500 3500 50  0001 C CNN
+F 3 "" H 3500 3500 50  0001 C CNN
+	1    3500 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 3500 2500 3350
+Wire Wire Line
+	2150 3350 2500 3350
+Wire Wire Line
+	2500 3500 2900 3500
+Wire Wire Line
+	2500 3250 2500 3100
+Wire Wire Line
+	2150 3250 2500 3250
+Wire Wire Line
+	2500 3100 2900 3100
+$Comp
+L Regulator_Linear:AZ1117-ADJ U2
+U 1 1 5D8C1DFA
+P 3900 4600
+F 0 "U2" H 3900 4842 50  0000 C CNN
+F 1 "AZ1117-ADJ" H 3900 4751 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 3900 4850 50  0001 C CIN
+F 3 "https://www.diodes.com/assets/Datasheets/AZ1117.pdf" H 3900 4600 50  0001 C CNN
+	1    3900 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV2
+U 1 1 5D8C226F
+P 4300 4900
+F 0 "RV2" H 4230 4946 50  0000 R CNN
+F 1 "1K" H 4230 4855 50  0000 R CNN
+F 2 "Instrumentation Amplifier:Bourns_PV36W" H 4300 4900 50  0001 C CNN
+F 3 "~" H 4300 4900 50  0001 C CNN
+	1    4300 4900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4300 4750 4300 4600
+Connection ~ 4300 4600
+Wire Wire Line
+	4300 4600 4200 4600
+Wire Wire Line
+	4150 4900 3900 4900
+$Comp
+L power:GND #PWR?
+U 1 1 5D8C72BE
+P 4700 4900
+F 0 "#PWR?" H 4700 4650 50  0001 C CNN
+F 1 "GND" H 4705 4727 50  0000 C CNN
+F 2 "" H 4700 4900 50  0001 C CNN
+F 3 "" H 4700 4900 50  0001 C CNN
+	1    4700 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D8C7529
+P 3450 4900
+F 0 "#PWR?" H 3450 4650 50  0001 C CNN
+F 1 "GND" H 3455 4727 50  0000 C CNN
+F 2 "" H 3450 4900 50  0001 C CNN
+F 3 "" H 3450 4900 50  0001 C CNN
+	1    3450 4900
+	1    0    0    -1  
+$EndComp
+Text Label 5200 4600 0    50   ~ 0
+Vload
+$Comp
+L Device:C C3
+U 1 1 5D8CBA3D
+P 3450 5700
+F 0 "C3" H 3250 5750 50  0000 L CNN
+F 1 "10uF" H 3150 5650 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm" H 3488 5550 50  0001 C CNN
+F 3 "~" H 3450 5700 50  0001 C CNN
+	1    3450 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D8CBA43
+P 4300 6000
+F 0 "#PWR?" H 4300 5750 50  0001 C CNN
+F 1 "GND" H 4305 5827 50  0000 C CNN
+F 2 "" H 4300 6000 50  0001 C CNN
+F 3 "" H 4300 6000 50  0001 C CNN
+	1    4300 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR?
+U 1 1 5D8CBA49
+P 3450 5550
+F 0 "#PWR?" H 3450 5400 50  0001 C CNN
+F 1 "+BATT" H 3465 5723 50  0000 C CNN
+F 2 "" H 3450 5550 50  0001 C CNN
+F 3 "" H 3450 5550 50  0001 C CNN
+	1    3450 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 5550 3600 5550
+Wire Wire Line
+	4700 5550 4300 5550
+Connection ~ 3450 5550
+$Comp
+L Device:C C4
+U 1 1 5D8CBA52
+P 4700 5700
+F 0 "C4" H 4815 5746 50  0000 L CNN
+F 1 "22uF" H 4815 5655 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm" H 4738 5550 50  0001 C CNN
+F 3 "~" H 4700 5700 50  0001 C CNN
+	1    4700 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:AZ1117-ADJ U3
+U 1 1 5D8CBA58
+P 3900 5550
+F 0 "U3" H 3900 5792 50  0000 C CNN
+F 1 "AZ1117-ADJ" H 3900 5701 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 3900 5800 50  0001 C CIN
+F 3 "https://www.diodes.com/assets/Datasheets/AZ1117.pdf" H 3900 5550 50  0001 C CNN
+	1    3900 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV3
+U 1 1 5D8CBA5E
+P 4300 5850
+F 0 "RV3" H 4230 5896 50  0000 R CNN
+F 1 "1K" H 4230 5805 50  0000 R CNN
+F 2 "Instrumentation Amplifier:Bourns_PV36W" H 4300 5850 50  0001 C CNN
+F 3 "~" H 4300 5850 50  0001 C CNN
+	1    4300 5850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4300 5700 4300 5550
+Connection ~ 4300 5550
+Wire Wire Line
+	4300 5550 4200 5550
+Wire Wire Line
+	4150 5850 3900 5850
+$Comp
+L power:GND #PWR?
+U 1 1 5D8CBA68
+P 4700 5850
+F 0 "#PWR?" H 4700 5600 50  0001 C CNN
+F 1 "GND" H 4705 5677 50  0000 C CNN
+F 2 "" H 4700 5850 50  0001 C CNN
+F 3 "" H 4700 5850 50  0001 C CNN
+	1    4700 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D8CBA6E
+P 3450 5850
+F 0 "#PWR?" H 3450 5600 50  0001 C CNN
+F 1 "GND" H 3455 5677 50  0000 C CNN
+F 2 "" H 3450 5850 50  0001 C CNN
+F 3 "" H 3450 5850 50  0001 C CNN
+	1    3450 5850
+	1    0    0    -1  
+$EndComp
+Text Label 5200 5550 0    50   ~ 0
+Vout
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 5D8CBD6D
+P 4300 3300
+F 0 "J2" H 4500 3300 50  0000 C CNN
+F 1 "DAQ" H 4500 3200 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-4_P5.08mm" H 4300 3300 50  0001 C CNN
+F 3 "~" H 4300 3300 50  0001 C CNN
+	1    4300 3300
+	1    0    0    1   
+$EndComp
+Text Label 3950 3200 0    50   ~ 0
+Vout
+Wire Wire Line
+	3950 3200 4100 3200
+Text Label 2150 3150 0    50   ~ 0
+Vload
+Wire Wire Line
+	2150 3150 2350 3150
+Wire Wire Line
+	3800 3300 4100 3300
+Wire Wire Line
+	4700 5550 5150 5550
+Connection ~ 4700 5550
+Wire Wire Line
+	4700 4600 5150 4600
+Connection ~ 4700 4600
+Text Label 3350 2850 0    50   ~ 0
+Vout
+$Comp
+L power:+BATT #PWR?
+U 1 1 5D8E7ED0
+P 1500 4300
+F 0 "#PWR?" H 1500 4150 50  0001 C CNN
+F 1 "+BATT" H 1515 4473 50  0000 C CNN
+F 2 "" H 1500 4300 50  0001 C CNN
+F 3 "" H 1500 4300 50  0001 C CNN
+	1    1500 4300
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2800 4750
+$Comp
+L Device:R_POT RV4
+U 1 1 5DBCE8CC
+P 2650 4750
+F 0 "RV4" V 2550 4800 50  0000 R CNN
+F 1 "200" V 2450 4800 50  0000 R CNN
+F 2 "Instrumentation Amplifier:Bourns_PV36W" H 2650 4750 50  0001 C CNN
+F 3 "~" H 2650 4750 50  0001 C CNN
+	1    2650 4750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3300 3000 3300 2850
+$Comp
+L Device:C C5
+U 1 1 5DCA1CFE
+P 5150 4750
+F 0 "C5" H 5250 4800 50  0000 L CNN
+F 1 "0.1uF" H 5250 4700 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5188 4600 50  0001 C CNN
+F 3 "~" H 5150 4750 50  0001 C CNN
+	1    5150 4750
+	1    0    0    -1  
+$EndComp
+Connection ~ 5150 4600
+Wire Wire Line
+	5150 4600 5400 4600
+$Comp
+L power:GND #PWR?
+U 1 1 5DCA31E1
+P 5150 4900
+F 0 "#PWR?" H 5150 4650 50  0001 C CNN
+F 1 "GND" H 5155 4727 50  0000 C CNN
+F 2 "" H 5150 4900 50  0001 C CNN
+F 3 "" H 5150 4900 50  0001 C CNN
+	1    5150 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 5DCA3353
+P 5150 5700
+F 0 "C6" H 5250 5750 50  0000 L CNN
+F 1 "0.1uF" H 5250 5650 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5188 5550 50  0001 C CNN
+F 3 "~" H 5150 5700 50  0001 C CNN
+	1    5150 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DCA3B90
+P 5150 5850
+F 0 "#PWR?" H 5150 5600 50  0001 C CNN
+F 1 "GND" H 5155 5677 50  0000 C CNN
+F 2 "" H 5150 5850 50  0001 C CNN
+F 3 "" H 5150 5850 50  0001 C CNN
+	1    5150 5850
+	1    0    0    -1  
+$EndComp
+Connection ~ 5150 5550
+Wire Wire Line
+	5150 5550 5400 5550
+Wire Wire Line
+	3300 2850 3550 2850
+$EndSCHEMATC
